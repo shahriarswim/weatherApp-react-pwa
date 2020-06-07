@@ -1,38 +1,157 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a1f44;
+  color: #1e2432;
+}
+
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('https://images8.alphacoders.com/106/thumb-1920-1066910.png');
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  outline: none;
+  padding: 2rem 10%;
+  border-radius: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+  background: rgba(250, 250, 250, 0.6);
+  box-shadow: 0 1rem 0.5rem 0 rgba(15, 15, 15, 0.4);
+  transition: all 0.2s;
+}
+
+.search:focus {
+  transform: translateY(-3px);
+}
+
+.btn {
+  outline: none;
+  border: 0;
+  border-radius: 1rem;
+  background-color: #0a1f44;
+  font-family: inherit;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  box-shadow: 0 1rem 0.5rem 0 rgba(15, 15, 15, 0.4);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  border-radius: 2rem;
+  transform: scaleX(1.1);
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 .7rem 0.5rem 0 rgba(15, 15, 15, 0.3);
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 4rem 8%;
+  border-radius: 2rem;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 1rem 1rem 0.5rem 0 rgba(15, 15, 15, 0.4);
+}
+
+.city__name {
+  font-size: 3rem;
+}
+
+.city__name sup {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-left: 0.2rem;
+  border-radius: 1rem;
+  color: #fff;
+  background: #ff8c00;
+}
+
+.city__temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #1e2432;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.city__temp sup {
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city__temp-detail {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #1e2432;
+  text-align: center;
+  width: 70%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.paragraph {
+  font-size: inherit;
+  letter-spacing: 1;
+  padding: 3px;
+}
+
+.paragraph__sup {
+  font-size: 1rem;
+}
+
+.city__info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.city__icon {
+  margin-top: 1rem;
+  width: 10rem;
+  height: 10rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.city__description {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .search {
+    padding: 2rem 15%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .city {
+    padding: 3rem 12%;
   }
 }
